@@ -236,9 +236,6 @@ section {
 
 .completed {
   background-color: var(--green-400);
-}
-
-.reset-btn:hover {
   cursor: pointer;
 }
 
@@ -251,13 +248,22 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, auto);
-    max-width: 1140px;
-    gap: 2rem;
   }
 
   .display-wrapper {
     grid-column: 2/-1;
     grid-row: 1/-1;
+    padding: 3rem 2rem;
+    /* width: 413px;
+    aspect-ratio: 1 / 1; */
+  }
+
+  .display-inner-wrapper {
+    margin-block-end: 3rem;
+  }
+
+  .total {
+    font-size: 3rem;
   }
 
   .tip-amount-wrapper {
@@ -265,10 +271,9 @@ section {
   }
 
   .tip-amount,
-.tip-amount-custom {
-  font-size: clamp(1.125rem, calc(.875rem + 1vw), 1.5rem);
-  /* padding-inline: clamp(.5rem, calc(.875rem + 1vw), 1rem); */
-}
+  .tip-amount-custom {
+    font-size: clamp(1.125rem, calc(0.875rem + 1vw), 1.5rem);
+  }
 
   body {
     display: flex;
