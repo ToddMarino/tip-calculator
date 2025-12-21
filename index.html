@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-block-start: 2rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="flex-col">
+      <!-- <h1 class="title">spli tter</h1> -->
+      <img class="logo" src="./images/logo.svg" alt="Splitter logo" />
+    </header>
+    <main>
+      <div class="container flex-col">
+        <section class="bill-total-wrapper flex-col">
+          <label class="bill-total-title" for="bill-total">Bill</label>
+          <div class="flex-row bg-light-grey bill-total-input-wrapper">
+            <img class="input-decoration" src="./images/icon-dollar.svg" />
+            <input
+              class="bill-total-input"
+              type="text"
+              id="bill-total"
+              placeholder="0"
+            />
+          </div>
+        </section>
+
+        <section class="tip-amount-wrapper">
+          <label class="tip-amount-title">Select Tip %</label>
+          <button class="tip-amount" data-tip=".05">5%</button>
+          <button class="tip-amount" data-tip=".10">10%</button>
+          <button class="tip-amount" data-tip=".15">15%</button>
+          <button class="tip-amount" data-tip=".25">25%</button>
+          <button class="tip-amount" data-tip=".50">50%</button>
+          <input
+            class="tip-amount-custom"
+            type="text"
+            id="customTip"
+            placeholder="Custom"
+          />
+        </section>
+
+        <section class="number-of-people-wrapper flex-col">
+          <div class="wrapper flex-row">
+            <label class="number-of-people-title" for="number-of-people"
+              >Number of People</label
+            >
+            <span class="error-message">Can't be zero</span>
+          </div>
+          <div class="flex-row bg-light-grey number-of-people-input-wrapper">
+            <img class="input-decoration" src="./images/icon-person.svg" />
+            <input
+              class="number-of-people-input"
+              type="text"
+              id="number-of-people"
+              placeholder="0"
+            />
+          </div>
+        </section>
+
+        <section class="display-wrapper flex-col">
+          <div class="display-inner-wrapper flex-row">
+            <div class="label-wrapper flex-col">
+              <p class="label-title">Tip Amount</p>
+              <p class="per-person">/ person</p>
+            </div>
+            <div class="total">$0.00</div>
+          </div>
+
+          <div class="display-inner-wrapper flex-row">
+            <div class="label-wrapper flex-col">
+              <p class="label-title">Total</p>
+              <p class="per-person">/ person</p>
+            </div>
+            <div class="total">$0.00</div>
+          </div>
+          <button class="reset-btn">Reset</button>
+        </section>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
