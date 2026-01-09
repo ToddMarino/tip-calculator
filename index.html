@@ -42,6 +42,7 @@
             <input
               class="bill-total-input"
               type="text"
+              inputmode="decimal"
               id="bill-total"
               placeholder="0"
             />
@@ -50,14 +51,15 @@
 
         <section class="tip-amount-wrapper">
           <label class="tip-amount-title">Select Tip %</label>
-          <button class="tip-amount" data-tip=".05">5%</button>
-          <button class="tip-amount" data-tip=".10">10%</button>
-          <button class="tip-amount" data-tip=".15">15%</button>
-          <button class="tip-amount" data-tip=".25">25%</button>
-          <button class="tip-amount" data-tip=".50">50%</button>
+          <button class="tip-amount" data-tip="05">5%</button>
+          <button class="tip-amount" data-tip="10">10%</button>
+          <button class="tip-amount" data-tip="15">15%</button>
+          <button class="tip-amount" data-tip="25">25%</button>
+          <button class="tip-amount" data-tip="50">50%</button>
           <input
             class="tip-amount-custom"
             type="text"
+            inputmode="number"
             id="customTip"
             placeholder="Custom"
           />
@@ -75,6 +77,7 @@
             <input
               class="number-of-people-input"
               type="text"
+              inputmode="numeric"
               id="number-of-people"
               placeholder="0"
             />
