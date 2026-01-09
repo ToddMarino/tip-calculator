@@ -15,7 +15,7 @@ let totalAmount = 0;
 let subTotal = 0;
 let totalPeople = 0;
 
-billTotal.addEventListener('blur', (e) => {
+billTotal.addEventListener('input', (e) => {
   billAmount = 0;
   billAmount = parseFloat(parseFloat(e.target.value).toFixed(2));
 });
@@ -32,7 +32,7 @@ tipButtons.forEach((btn) => {
   });
 });
 
-customTip.addEventListener('blur', (e) => {
+customTip.addEventListener('input', (e) => {
   let customTipPercent = e.target.value;
   if (customTipPercent === '') {
     return;
@@ -42,7 +42,7 @@ customTip.addEventListener('blur', (e) => {
   }
 });
 
-numPeople.addEventListener('blur', (e) => {
+numPeople.addEventListener('input', (e) => {
   console.log(e.target.value);
   if (e.target.value === '') {
     errorSpan.classList.toggle('show');
