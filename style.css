@@ -252,6 +252,7 @@ section:not(:last-of-type) {
 
 @media (width >= 870px) {
   .container {
+    inline-size: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, auto);
