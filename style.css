@@ -73,7 +73,8 @@ section:not(:last-of-type) {
 }
 
 .container {
-  max-inline-size: 60vw;
+  box-sizing: content-box;
+  max-inline-size: 90%;
   margin-inline: auto;
   background-color: var(--white);
   /* height: 100vh; */
@@ -145,6 +146,10 @@ section:not(:last-of-type) {
 .number-of-people-input {
   color: var(--grey-500);
   opacity: 0.75;
+}
+
+.tip-amount-custom::placeholder {
+  text-align: center;
 }
 
 .tip-amount-wrapper {
@@ -245,7 +250,7 @@ section:not(:last-of-type) {
   border: 1px solid red;
 }
 
-@media (min-width: 850px) {
+@media (width >= 870px) {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -274,7 +279,7 @@ section:not(:last-of-type) {
 
   .tip-amount,
   .tip-amount-custom {
-    font-size: clamp(1.125rem, calc(0.875rem + 1vw), 1.5rem);
+    font-size: clamp(1.125rem, 0.875rem + 1vw, 1.5rem);
   }
 
   body {
